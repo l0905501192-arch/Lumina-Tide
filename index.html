@@ -300,6 +300,16 @@ btn.addEventListener('click',async e=>{e.stopPropagation();muted=!muted;audio.mu
 })();
 </script>
 
+
+<style id="mobile-button-bird-final-20261122">
+/* Mobile-only: button labels clear decorative stars; bird portrait gets a modest further zoom; copy shifts inward. */
+@media (max-width:700px){
+  #home .fairytale-btn span{position:relative!important;left:7px!important;}
+  #detail-bird .detail-img{transform:scale(1.68)!important;transform-origin:right center!important;z-index:1!important;}
+  #detail-bird .detail-text{left:3.2vw!important;right:auto!important;z-index:3!important;}
+}
+</style>
+
 </body>
 <style>
 /* Only the lower "點擊下一步" hint is changed: slow breathing and new text color. */
@@ -319,4 +329,88 @@ btn.addEventListener('click',async e=>{e.stopPropagation();muted=!muted;audio.mu
 
 /* Final splash hint placement: keep text inside the lower-left lavender panel, aligned to the green-marked area. */
 #splash .hint{position:absolute!important;left:33.5%!important;bottom:13.2%!important;width:12%!important;max-width:12%!important;transform:translateX(-50%)!important;margin:0!important;text-align:center!important;white-space:nowrap!important;z-index:5!important;color:#7a9cdd!important;text-shadow:0 1px 5px rgba(122,156,221,.55)!important;animation:hintBreath 4.8s ease-in-out infinite!important;}
+</style>
+
+<style id="mobile-character-layout-only">
+/* Mobile-only: enlarge character artwork while keeping the description in its own column. Desktop styles remain untouched. */
+@media (max-width:700px){
+  #detail-wanderer .detail-img, #detail-bird .detail-img{
+    width:58vw!important; max-width:58vw!important; height:68vh!important; top:16vh!important; bottom:auto!important;
+    object-fit:contain!important; transform:none!important;
+  }
+  #detail-wanderer .detail-img{left:0!important; right:auto!important;}
+  #detail-bird .detail-img{right:0!important; left:auto!important;}
+  #detail-wanderer .detail-text, #detail-bird .detail-text{
+    width:38vw!important; max-width:38vw!important; font-size:clamp(11px,3.15vw,14px)!important;
+    line-height:1.75!important; letter-spacing:.035em!important; top:50%!important; transform:translateY(-50%)!important;
+    overflow-wrap:anywhere!important;
+  }
+  #detail-wanderer .detail-text{right:3vw!important; left:auto!important; text-align:center!important;}
+  #detail-bird .detail-text{left:3vw!important; right:auto!important; text-align:center!important;}
+  #detail-wanderer .name, #detail-bird .name{font-size:clamp(20px,5.5vw,27px)!important; margin-bottom:8px!important;}
+}
+
+/* Final mobile-only portrait/text layout: desktop remains unchanged */
+@media (max-width:700px){
+  #detail-wanderer .detail-img, #detail-bird .detail-img{
+    width:48vw!important; max-width:48vw!important; height:64vh!important; max-height:64vh!important;
+    top:18vh!important; bottom:auto!important; object-fit:contain!important; transform:none!important;
+  }
+  #detail-wanderer .detail-img{left:1vw!important;right:auto!important;}
+  #detail-bird .detail-img{right:1vw!important;left:auto!important;}
+  #detail-wanderer .detail-text, #detail-bird .detail-text{
+    width:46vw!important; max-width:46vw!important; top:50%!important; transform:translateY(-50%)!important;
+    font-size:clamp(11px,3.2vw,14px)!important; line-height:1.65!important; letter-spacing:.025em!important;
+    text-align:center!important; overflow-wrap:anywhere!important;
+  }
+  #detail-wanderer .detail-text{left:auto!important;right:1vw!important;}
+  #detail-bird .detail-text{left:1vw!important;right:auto!important;}
+  #detail-wanderer .name, #detail-bird .name{font-size:clamp(19px,5vw,25px)!important;margin-bottom:7px!important;}
+}
+
+/* 2026-11-22 final requested adjustments: desktop untouched; mobile-only layout */
+@media (max-width:700px){
+  /* Home copy and menu: move together into the left side of the artwork */
+  #home .home-copy{left:7vw!important;top:43%!important;transform:none!important;width:44vw!important;max-width:44vw!important;box-sizing:border-box!important;}
+  #home .main-title{font-size:clamp(30px,8vw,44px)!important;letter-spacing:.16em!important;}
+  #home .subtitle{font-size:clamp(13px,3.6vw,17px)!important;letter-spacing:.12em!important;margin-bottom:14px!important;}
+  #home .menu{width:100%!important;max-width:100%!important;gap:9px!important;}
+  #home .fairytale-btn{width:100%!important;min-height:46px!important;padding:9px 10px!important;font-size:clamp(12px,3.5vw,15px)!important;box-sizing:border-box!important;}
+  /* Character artwork and copy are separate columns, centered as a pair. */
+  #detail-wanderer .detail-img,#detail-bird .detail-img{width:55vw!important;max-width:55vw!important;height:72vh!important;max-height:72vh!important;top:14vh!important;bottom:auto!important;object-fit:contain!important;transform:none!important;}
+  #detail-wanderer .detail-img{left:-3vw!important;right:auto!important;}
+  #detail-bird .detail-img{right:-3vw!important;left:auto!important;}
+  #detail-wanderer .detail-text,#detail-bird .detail-text{width:38vw!important;max-width:38vw!important;box-sizing:border-box!important;top:50%!important;bottom:auto!important;transform:translateY(-50%)!important;font-size:clamp(11px,3.1vw,14px)!important;line-height:1.72!important;letter-spacing:.025em!important;text-align:center!important;overflow-wrap:anywhere!important;white-space:normal!important;padding:0 1.5vw!important;}
+  #detail-wanderer .detail-text{left:auto!important;right:2vw!important;}
+  #detail-bird .detail-text{left:2vw!important;right:auto!important;}
+  #detail-wanderer .name,#detail-bird .name{font-size:clamp(19px,5.1vw,25px)!important;margin-bottom:7px!important;letter-spacing:.14em!important;}
+}
+</style>
+
+<style id="mobile-final-tuning-20261122">
+/* Mobile-only final tuning. Desktop styles and non-mentioned content remain untouched. */
+@media (max-width:700px){
+  /* Move the home title, subtitle and buttons upward together into the artwork; center them vertically as a group. */
+  #home .home-copy{top:36.5%!important;left:6.5vw!important;width:44vw!important;max-width:44vw!important;transform:none!important;}
+  #home .main-title{font-size:clamp(28px,7.4vw,42px)!important;letter-spacing:.13em!important;margin-bottom:5px!important;}
+  #home .subtitle{font-size:clamp(12px,3.25vw,16px)!important;letter-spacing:.09em!important;margin-bottom:10px!important;}
+  #home .menu{gap:7px!important;}
+  #home .fairytale-btn{min-height:42px!important;padding:7px 8px!important;font-size:clamp(11px,3.2vw,14px)!important;}
+
+  /* Zoom character artwork (the source images contain substantial empty space); keep text in separate columns. */
+  #detail-wanderer .detail-img,#detail-bird .detail-img{width:62vw!important;max-width:62vw!important;height:78vh!important;max-height:78vh!important;top:11vh!important;object-fit:contain!important;transform:scale(1.52)!important;}
+  #detail-wanderer .detail-img{left:-9vw!important;right:auto!important;transform-origin:left center!important;}
+  #detail-bird .detail-img{right:-9vw!important;left:auto!important;transform-origin:right center!important;}
+  #detail-wanderer .detail-text,#detail-bird .detail-text{width:39vw!important;max-width:39vw!important;font-size:clamp(10.5px,3vw,13px)!important;line-height:1.65!important;letter-spacing:.018em!important;padding:0 1vw!important;}
+  #detail-wanderer .detail-text{right:1.5vw!important;left:auto!important;}
+  #detail-bird .detail-text{left:1.5vw!important;right:auto!important;}
+}
+</style>
+<style id="mobile-button-bird-final-20261122">
+/* Mobile-only: button labels clear decorative stars; bird portrait gets a modest further zoom; copy shifts inward. */
+@media (max-width:700px){
+  #home .fairytale-btn span{position:relative!important;left:7px!important;}
+  #detail-bird .detail-img{transform:scale(1.68)!important;transform-origin:right center!important;z-index:1!important;}
+  #detail-bird .detail-text{left:3.2vw!important;right:auto!important;z-index:3!important;}
+}
 </style>
